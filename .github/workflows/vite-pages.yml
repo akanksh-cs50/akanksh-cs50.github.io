@@ -31,7 +31,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          repository: 'https://github.com/akanksh-cs50/react-merch-shop.git'
+          repository: akanksh-cs50/react-merch-shop
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
