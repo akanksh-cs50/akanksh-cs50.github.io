@@ -25,11 +25,13 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://github.com/akanksh-cs50/react-merch-shop.git
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          repository: 'https://github.com/akanksh-cs50/react-merch-shop.git'
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
